@@ -74,6 +74,7 @@ export interface Spinner {
   zIndex?: number;
   template?: string;
   showSpinner?: boolean;
+  disableInput?:boolean;
 }
 
 export class NgxSpinner {
@@ -90,6 +91,7 @@ export class NgxSpinner {
   zIndex: number;
   template: string;
   showSpinner: boolean;
+  disableInput: boolean;
 
   constructor(init?: Partial<NgxSpinner>) {
     Object.assign(this, init);
