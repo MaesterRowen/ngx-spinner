@@ -73,11 +73,6 @@ export class NgxSpinnerComponent implements OnDestroy, OnInit, OnChanges {
    */
   @Input() name: string;
   /**
-   * To toggle disabling of input
-   * 
-   */
-  @Input() disableInput: boolean;
-  /**
    * z-index value
    *
    * @memberof NgxSpinnerComponent
@@ -167,7 +162,7 @@ export class NgxSpinnerComponent implements OnDestroy, OnInit, OnChanges {
     this.name = PRIMARY_SPINNER;
     this.template = null;
     this.showSpinner = false;
-    this.disableInput = true;
+
     this.divArray = [];
     this.divCount = 0;
     this.show = false;
@@ -225,8 +220,7 @@ export class NgxSpinnerComponent implements OnDestroy, OnInit, OnChanges {
       show: this.show,
       zIndex: this.zIndex,
       template: this.template,
-      showSpinner: this.showSpinner,
-      disableInput: this.disableInput,
+      showSpinner: this.showSpinner
     });
   }
   /**
