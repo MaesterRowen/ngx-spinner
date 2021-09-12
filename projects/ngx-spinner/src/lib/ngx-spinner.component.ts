@@ -144,6 +144,7 @@ export class NgxSpinnerComponent implements OnDestroy, OnInit, OnChanges {
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     if (this.spinnerDOM && this.spinnerDOM.nativeElement && this.disableInput) {
+    if (this.spinnerDOM && this.spinnerDOM.nativeElement && this.fullScreen && this.disableInput) {
       event.returnValue = false;
       event.preventDefault();
     }
